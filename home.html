@@ -2,13 +2,96 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title>ABTesting!</title>
     <link rel="stylesheet" href="index.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
+  <body style="background-color: #e2f7cb;">
     <!-- TODO: put your HTML code here! -->
+    <h1 style="text-align: center;font-size: 45px;">AB Testing</h1>
+    <h2 style= "text-align: center; font-size: 40px;"> Version A & Version B</h2>
+    <p>
+      <div class="flex-container">
+        <div><img src="versionA.png" alt="Version A" width="100%" height="100%">
+          <figcaption style="text-align: center; font-size: 20px;">Website Version A</figcaption></div>
+        <div><img src="versionB.png" alt="VersionB" width="100%" height="100%">
+          <figcaption style="text-align: center; font-size: 20px;">Website Version B</figcaption></div>
+      </div>
+
+    </p>
+    <h2 style="text-align: center;font-size: 40px;"> Null and Alternate Hypothesis </h2>
+    <div class="flex-container">
+      <div style = "font-size:30px;"> Metric 1: Time to Completion
+        <p style= "font-size: 20px;"> 
+        <b>Definition:</b>the time it takes to complete the desired task (in this case, order cacti)
+        <br>
+          <b>Null Hypothesis:</b> Version A will have shorter time to completion than version B. <br>
+          <b>Alternative Hypothesis:</b> Version A will not have shorter time to completion than version B. <br>
+          <b>Reasoning:</b> A high time to completion for a certain task in a website may be an indication of difficulty <br>
+          in navigating the website. A good website design should be able to have users to have a good idea of all of its <br>
+          components at a first glance. (It shouldn't take the user a long time to go through all the elements of the website) <Br>
+          In my new website, I decided to stack everything in the middle instead of having them pushed to the left. <Br>
+          I thought having all the contents centered will make it easier for the users to have a quick glance at the website <br>
+          and figure out where things are locate eaasier. If my thought was correct, the p value will be small enough (in this case, <br>
+          less than 0.05) to reject the null hypothesis and show that it takes longer for the users to complete the task for version A <br>
+          website than it would for version B website. 
+
+        </p>
+      </div>
+      <div > <img src="completiontime.png" alt="VersionB" width="100%" height="100%">
+      </div>
+    </div>
+    <div class="flex-container">
+      <div style ="font-size:30px;"> Metric 2: Return Rate
+        <p style="font-size: 20px;">
+        <b>Definition:</b> the number of times a user returned to the page <br>
+        <b>Null Hypothesis:</b> Version A and Version B will not have significant difference in their return rate <Br>
+        <b>Alternative Hypothesis:</b> Version A and Version B will have significant difference in their return rate <br> 
+        <b>Reasoning:</b> A website having a high return rate may be an indication user being unsure of the cart content <br>
+        (ex: how many things are in the cart, How many times the user clicked on certain item,...etc) I thought aligning <br>
+        the elements to come to the center of the page would make it easier for the viewers to keep an eye on the cart and <Br>
+        the item log at the same time, thus reducing the return rate. If version B of the website turns out to be more <br>
+        effective in reducing the return rate, the p value will turn out to be small enough to reject the null hypothesis <br>
+        
+      </p>
+      </div>
+      <div > <img src="returnrate.png" alt="VersionB" width="100%" height="60%">
+      </div>
+    </div>
+    <h2 style="text-align: center; font-size: 40px;">Data Collection</h2>
+    <ul style="font-size: 20px;">
+      <li> CS1300 students were given a list of heroku links to different websites that generates either version A or version B with 50/50 chance</li>
+      <li> Everyone were asked to add items until the cart goes over 150$ (threshold value) --> each student's log was recorded</li>
+      <li> Then, I manually calculated the time of entry and exit for each user and recorded them for further calculation. Return rate of each user was also recorded</li>
+    </ul>
+    <h2 style="text-align: center;font-size: 40px;">Infographic & Results</h2>
+    <div class = "flex-container">
+      <div><img src="uiuxinfographic.png" alt="infographic" width="100%" height="100%"></div>
+      <div style="font-size:30px;"> Result
+      <p style="font-size: 20px;">
+      <b> Time to Completion</b> <Br>
+        <u> T -score:</u> -0.0837482042459 <br>
+        <u> P-value :</u> 0.4671477551 <br>
+        <u> Conclusion: </u> Since the P-value is greater than a (0.4671477551 > 0.05), we fail to reject the null hypothese. <Br>
+          (In other words, we accept the Null Hypothesis) Version A had shorter time to completion than version B. <br>
+          <br>
+      <b> Return Rate</b> <Br>
+        <u> Chi^2 value:</u> 0.385714285714 <br>
+        <u> P-value :</u> 0.534560802035 <br>
+        <u> Conclusion: </u> Since the P-value is greater than a (0.534560802035 > 0.05), we fail to reject the null hypothese. <Br>
+          (In other words, we accept the Null Hypothesis) There was no significant difference in the return rate between the two versions of the website  <br>
+
+
+      </p></div>
+    </div>
+    <h2 style="text-align: center;">Broad Takeaway</h2>
+    <ul style="font-size:20px ;">
+      <li> The result has limitations because of the small sample size. I could get ~25 users to test my website which is not enough to be the representation of the entire pool of users</li>
+      <li> From the result, I figured that the users had shorter time to completion when the elements were left-sided than when they were centered (contrary to my initial thought) </li>
+      <li> The results might have also been less accurate because the user experience that we collected during section didn't quite align with the actual user experience. 
+        (We were simply told to fill the cart over 150$ and move onto the next website. An acutal user of the website will take longer time navigating the website and moving on to the checkout page. </li>
+    </ul>
   </body>
 </html>
