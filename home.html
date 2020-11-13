@@ -12,8 +12,12 @@
     <!-- TODO: put your HTML code here! -->
     <h1 style="text-align: center;font-size: 45px;">AB Testing</h1>
     <h2 style= "text-align: center; font-size: 40px;"> Version A & Version B</h2>
-    <p>
+    <p style = "font-size: 20px;">
       <div class="flex-container">
+        <div style="font-size: 20px;">
+          AB testing is one of the useful techniques to figure out which version of an interface works/performs better than other versions. 
+          For this project, we were given a simple website and were told to change a small component of it that would ideally make the website better.<br>
+          One of the big changes I made was to center all the components (images, text, ..etc) instead of having them pushed to the left. <br> </div>
         <div><img src="versionA.png" alt="Version A" width="100%" height="100%">
           <figcaption style="text-align: center; font-size: 20px;">Website Version A</figcaption></div>
         <div><img src="versionB.png" alt="VersionB" width="100%" height="100%">
@@ -34,7 +38,7 @@
           components at a first glance. (It shouldn't take the user a long time to go through all the elements of the website) <Br>
           In my new website, I decided to stack everything in the middle instead of having them pushed to the left. <Br>
           I thought having all the contents centered will make it easier for the users to have a quick glance at the website <br>
-          and figure out where things are locate eaasier. If my thought was correct, the p value will be small enough (in this case, <br>
+          and figure out where things are located faster. If my thought was correct, the p value will be small enough (in this case, <br>
           less than 0.05) to reject the null hypothesis and show that it takes longer for the users to complete the task for version A <br>
           website than it would for version B website. 
 
@@ -47,12 +51,12 @@
       <div style ="font-size:30px;"> Metric 2: Return Rate
         <p style="font-size: 20px;">
         <b>Definition:</b> the number of times a user returned to the page <br>
-        <b>Null Hypothesis:</b> Version A and Version B will not have significant difference in their return rate <Br>
+        <b>Null Hypothesis:</b> Version A and Version B will not have a significant difference in their return rate <Br>
         <b>Alternative Hypothesis:</b> Version A and Version B will have significant difference in their return rate <br> 
         <b>Reasoning:</b> A website having a high return rate may be an indication user being unsure of the cart content <br>
-        (ex: how many things are in the cart, How many times the user clicked on certain item,...etc) I thought aligning <br>
+        (ex: how many things are in the cart, How many times the user clicked on a certain item,...etc) I thought aligning <br>
         the elements to come to the center of the page would make it easier for the viewers to keep an eye on the cart and <Br>
-        the item log at the same time, thus reducing the return rate. If version B of the website turns out to be more <br>
+        the item logs at the same time, thus reducing the return rate. If version B of the website turns out to be more <br>
         effective in reducing the return rate, the p value will turn out to be small enough to reject the null hypothesis <br>
         
       </p>
@@ -63,8 +67,8 @@
     <h2 style="text-align: center; font-size: 40px;">Data Collection</h2>
     <ul style="font-size: 20px;">
       <li> CS1300 students were given a list of heroku links to different websites that generates either version A or version B with 50/50 chance</li>
-      <li> Everyone were asked to add items until the cart goes over 150$ (threshold value) --> each student's log was recorded</li>
-      <li> Then, I manually calculated the time of entry and exit for each user and recorded them for further calculation. Return rate of each user was also recorded</li>
+      <li> Everyone was asked to add items until the cart goes over 150$ (threshold value) --> each student's log was recorded</li>
+      <li> Then, I manually calculated the time of entry and exit for each user and recorded them for further calculation. A return rate of each user was also recorded</li>
     </ul>
     <h2 style="text-align: center;font-size: 40px;">Infographic & Results</h2>
     <div class = "flex-container">
@@ -83,18 +87,26 @@
         <u> Conclusion: </u> Since the P-value is greater than a (0.534560802035 > 0.05), we fail to reject the null hypothese. <Br>
           (In other words, we accept the Null Hypothesis) There was no significant difference in the return rate between the two versions of the website  <br>
           <br>
+      <p style= "font-size:30px"> Broad Takeaway</p>
+    <ul style="font-size:20px ;">
+      <li> The result has limitations because of the small sample size. I could get ~25 users to test my website which is not enough to be the representation of the entire pool of users</li>
+      <li> From the result, I figured that the users had a shorter time to completion when the elements were left-sided than when they were centered (contrary to my initial thought) </li>
+      <li> The results might have also been less accurate because the user experience that we collected during the section didn't quite align with the actual user experience. 
+        (We were simply told to fill the cart over 150$ and move onto the next website. An actual user of the website will take a longer time navigating the website and moving on to the checkout page. </li>
+    </ul>
 
-          <img src="cactus.jpeg" alt="infographic" width="30%" height="30%">
+          <img src="cactus.jpeg" alt="infographic" width="20%" height="30%">
+
       </p>
     
     </div>
     </div>
-    <h2 style="text-align: center;">Broad Takeaway</h2>
+    <!-- <h2 style="text-align: center;">Broad Takeaway</h2>
     <ul style="font-size:20px ;">
       <li> The result has limitations because of the small sample size. I could get ~25 users to test my website which is not enough to be the representation of the entire pool of users</li>
       <li> From the result, I figured that the users had shorter time to completion when the elements were left-sided than when they were centered (contrary to my initial thought) </li>
       <li> The results might have also been less accurate because the user experience that we collected during section didn't quite align with the actual user experience. 
         (We were simply told to fill the cart over 150$ and move onto the next website. An acutal user of the website will take longer time navigating the website and moving on to the checkout page. </li>
-    </ul>
+    </ul> -->
   </body>
 </html>
